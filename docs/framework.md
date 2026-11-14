@@ -24,3 +24,21 @@ flowchart LR
     F5 --> F6[06. Verificación]
     F6 -. Retroalimentación .-> F1
     F6 -. Ajuste de Línea Base .-> F2
+```
+
+## 4. Actores y Responsabilidades (Enfoque Purple Team)
+```mermaid
+sequenceDiagram
+    participant RS as Responsable del Sistema
+    participant CE as Coordinador Evaluación
+    participant AO as Analista Ofensivo (Red)
+    participant AD as Analista Defensivo (Blue)
+    participant CU as Custodio de Evidencias
+
+    RS->>CE: Autoriza alcance y accesos
+    CE->>AO: Asigna protocolos de prueba
+    AO->>CU: Entrega bitácoras y evidencias técnicas
+    AO->>AD: Comparte hallazgos (Purple Team)
+    AD->>RS: Implementa controles y mitigaciones
+    AO->>AD: Reejecuta pruebas de verificación
+```
